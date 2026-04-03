@@ -1,0 +1,105 @@
+#include <stdio.h>
+
+int main() {
+// days -> months
+    int total_days, months, days;
+
+    
+    printf("Enter total days: ");
+    scanf("%d", &total_days);
+
+    
+    months = total_days / 30;   
+    days = total_days % 30;      
+    printf("Months = %d, Days = %d\n", months, days);
+
+
+//ticket 
+int type, adult, student, total_fare;
+ scanf("%d %d %d", &type, &adult, &student);
+    total_fare = (adult * 400) + (student * 200);
+    if (type == 1) {
+        printf("Seat: Shovon\n");
+    } else if (type == 2) {
+        printf("Seat: AC\n");
+    } else if (type == 3) {
+        printf("Seat: Snigdha\n");
+    }
+    printf("Total Fare: %d\n", total_fare);
+
+
+//character check
+char ch;
+
+    
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    
+    if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+        
+        
+        if (ch >= 'A' && ch <= 'Z') {
+            if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+                printf("Uppercase Vowel\n");
+            else
+                printf("Uppercase Consonant\n");
+        } 
+        // Lowercase 
+        else {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                printf("Lowercase Vowel\n");
+            else
+                printf("Lowercase Consonant\n");
+        }
+    } 
+    
+    else if (ch >= '0' && ch <= '9') {
+        
+        if ((ch - '0') % 2 == 0)
+            printf("Even Digit\n");
+        else
+            printf("Odd Digit\n");
+    } 
+   
+    else {
+        printf("Special Character\n");
+    }
+
+// date check-> 
+#include <stdio.h>
+
+int main() {
+    int day, month, year;
+
+    
+    scanf("%d %d %d", &day, &month, &year);
+
+   
+    if (year >= 1700 && year <= 2500 && month >= 1 && month <= 12) {
+        
+      
+        if (month == 2) {
+            if (day >= 1 && day <= 28) {
+                printf("Valid\n");
+            } else {
+                printf("Invalid\n");
+            }
+        }
+        
+        else {
+            if (day >= 1 && day <= 30) {
+                printf("Valid\n");
+            } else {
+                printf("Invalid\n");
+            }
+        }
+    } 
+    else {
+        printf("Invalid\n");
+    }
+
+    return 0;
+}
+    return 0;
+}
