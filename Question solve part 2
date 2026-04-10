@@ -1,0 +1,98 @@
+//while loop
+#include <stdio.h>
+
+int main() {
+    int i, sum = 0;
+    i = 0;
+    while (i < 5) {
+        sum += i;
+        printf("%d %d\n", i, sum);
+        i++;
+    }
+    return 0;
+}
+//do while loop
+#include <stdio.h>
+
+int main() {
+    int i, sum = 0;
+    i = 0;
+    do {
+        sum += i;
+        printf("%d %d\n", i, sum);
+        i++;
+    } while (i < 5);
+    return 0;
+}
+
+// single bit print from backside 
+int n = 245; 
+while(n) {
+    printf("%d, ", n % 10);
+    n /= 10;               
+}
+
+//1-100 er moddhe borgo sonkha xy=25 er theke 25 er niche print 
+
+int i = 1;//6
+while (i <= 100) {
+    if (i * i > 25) //6*6=36>25
+        break;      
+    printf("%d\n", i);//5
+    i++;//6
+}
+
+//sallery increase
+#include <stdio.h>
+
+int main() {
+    float salary;
+    int years = 0;
+
+    scanf("%f", &salary);
+
+    while (salary < 2000) {
+        salary = salary + (salary * 0.05);
+        years++;
+    }
+
+    printf("%d\n", years);
+
+    return 0;
+}
+
+//armstrong number 
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, originalNum, remainder, n = 0;
+    double result = 0.0;
+
+    scanf("%d", &num);
+
+    originalNum = num;
+    int temp = num;
+    while (temp != 0) {
+        temp /= 10;
+        n++;
+    }
+
+    temp = num;
+
+    
+    while (temp != 0) {
+        remainder = temp % 10;
+        result += pow(remainder, n);
+        temp /= 10;
+    }
+
+    
+    if ((int)result == originalNum)
+        printf("Armstrong number\n");
+    else
+        printf("Not an Armstrong Number\n");
+
+    return 0;
+}
