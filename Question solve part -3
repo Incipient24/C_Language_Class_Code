@@ -1,0 +1,47 @@
+// biggest number -> 
+
+#include <stdio.h>
+
+int main() {
+    int A, B, C;
+    scanf("%d %d %d", &A, &B, &C);
+
+    if (A >= B && A >= C)
+        printf("%d is the biggest.", A);
+    else if (B >= A && B >= C)
+        printf("%d is the biggest.", B);
+    else
+        printf("%d is the biggest.", C);
+
+    return 0;
+}
+
+// program er shob section code theke->
+/* 1. DOCUMENTATION SECTION
+   Description: This program calculates the area of a circle.
+*/
+
+#include <stdio.h>   // 2. LINK SECTION (Header files)
+#define PI 3.1415    // 3. DEFINITION SECTION (Macro/Constants)
+
+int global_var = 10; // 4. GLOBAL DECLARATION SECTION
+
+// 5. MAIN FUNCTION SECTION (Execution starts here)
+int main() {
+    float radius, area; 
+
+    printf("Enter radius: ");
+    scanf("%f", &radius);
+
+    area = PI * radius * radius;
+
+    printf("Area is: %.2f", area);
+
+    return 0; // End of main function
+}
+
+/* 6. SUB-PROGRAM SECTION (User-defined functions)
+   void customFunction() { 
+       // code here 
+   } 
+*/
